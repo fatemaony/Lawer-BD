@@ -27,7 +27,12 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
-    errorElement: <ErrorPage />,
+    errorElement: (
+      <>
+        <NavBar />
+        <ErrorPage />
+      </>
+    ),
   },
   {
     path: "/lawyer/:lawyerId",
@@ -38,11 +43,21 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
-    errorElement: <ErrorPage />,
+    errorElement: (
+      <>
+        <NavBar />
+        <LawyerErrorPage />
+      </>
+    ),
   },
   {
     path: "/no-lawyer-found",
-    element: <LawyerErrorPage />,
+    element: (
+      <>
+        <NavBar />
+        <LawyerErrorPage />
+      </>
+    ),
   },
   {
     path: "/my-bookings",
