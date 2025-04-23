@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
+import { ToastContainer } from "react-toastify";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -53,8 +53,7 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
-  }
-,
+  },
   {
     path: "/blogs",
     element: (
@@ -64,9 +63,12 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
-  }
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <>
+    <ToastContainer />
+    <RouterProvider router={router} />
+  </>
 );

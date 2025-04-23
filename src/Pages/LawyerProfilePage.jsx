@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import lawyers from "../data/lawyers";
 import { Pen } from "lucide-react";
 import Loding from "../Components/Loding";
+import { toast } from "react-toastify";
 
 const LawyerProfilePage = () => {
   const { lawyerId } = useParams();
@@ -50,7 +51,7 @@ const LawyerProfilePage = () => {
     // Save back to localStorage
     localStorage.setItem("appointments", JSON.stringify(existingAppointments));
   
-    alert("Appointment booked successfully!");
+    toast.success("Appointment booked successfully!");
     navigate("/my-bookings");
   };
   
