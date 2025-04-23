@@ -26,6 +26,46 @@ const MyBookingPage = () => {
 
   return (
     <div className="px-32 py-12">
+      {appointments.length > 0 && (
+        <div className="w-full h-72 mb-12 border-1 border-gray-300 rounded-xl p-6">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={appointments}
+              margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" opacity={0.1} />
+              <XAxis
+                dataKey="lawyerName"
+                tick={{ fontSize: 12 }}
+                interval={0}
+                axisLine={true}
+              />
+              <YAxis
+                tick={{ fontSize: 12 }}
+                axisLine={true}
+                tickLine={true}
+                domain={[0, "dataMax + 200"]} // Auto adjust with some padding
+              />
+              <Tooltip
+                contentStyle={{
+                  background: "#fff",
+                  borderRadius: "6px",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                }}
+                formatter={(value) => [`$${value}`, "Consultation Fee"]}
+                labelFormatter={(label) => `Lawyer: ${label}`}
+              />
+              <Bar
+                dataKey="fee"
+                name="Consultation Fee"
+                fill="#4f46e5"
+                radius={[4, 4, 0, 0]}
+                barSize={30}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      )}
 
       <h1 className="text-3xl font-bold text-center mb-2">
         My Today Appointments
