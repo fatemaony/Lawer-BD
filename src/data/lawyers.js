@@ -4,7 +4,7 @@ const lawyers = [
     name: "Clarence Darrow",
     expertise: "Family Lawyer",
     licenseNo: "BD 46839850",
-    image: "https://depositphotos.com/1234568/lawyer3.jpg",
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "18+ Years Experience",
     consultationFee: 150,
     availabilityDays: ["Monday", "Wednesday", "Friday"]
@@ -14,7 +14,7 @@ const lawyers = [
     name: "Clarence Darrow",
     expertise: "Criminal Expert",
     licenseNo: "BD 24940499",
-    image: "https://pixabay.com/get/g0987654321fedcba.jpg",
+    image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "17+ Years Experience",
     consultationFee: 200,
     availabilityDays: ["Tuesday", "Thursday"]
@@ -24,7 +24,7 @@ const lawyers = [
     name: "Hugh Cumber",
     expertise: "Family Lawyer",
     licenseNo: "BD 86245400",
-    image: "https://pixabay.com/get/g0987654321fedcba.jpg",
+    image: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "20+ Years Experience",
     consultationFee: 180,
     availabilityDays: ["Monday", "Tuesday", "Wednesday"]
@@ -34,7 +34,7 @@ const lawyers = [
     name: "Janet Bernstein Teebagy",
     expertise: "Family Lawyer",
     licenseNo: "BD 31866110",
-    image: "https://freeimages.com/lawyer6.jpg",
+    image: "https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "16+ Years Experience",
     consultationFee: 160,
     availabilityDays: ["Wednesday", "Thursday", "Friday"]
@@ -44,7 +44,7 @@ const lawyers = [
     name: "Atticus Finch",
     expertise: "Environmental Lawyer",
     licenseNo: "BD 90587456",
-    image: "https://depositphotos.com/1234569/lawyer5.jpg",
+    image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "14+ Years Experience",
     consultationFee: 220,
     availabilityDays: ["Monday", "Friday"]
@@ -54,7 +54,7 @@ const lawyers = [
     name: "Hugh Cumber",
     expertise: "Bankruptcy Lawyer",
     licenseNo: "BD 86287126",
-    image: "https://depositphotos.com/1234569/lawyer5.jpg",
+    image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "13+ Years Experience",
     consultationFee: 170,
     availabilityDays: ["Tuesday", "Thursday", "Saturday"]
@@ -64,7 +64,7 @@ const lawyers = [
     name: "Clarence Darrow",
     expertise: "Real Estate Lawyer",
     licenseNo: "BD 23987868",
-    image: "https://pixabay.com/get/g0987654321fedcba.jpg",
+    image: "https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "4+ Years Experience",
     consultationFee: 140,
     availabilityDays: ["Monday", "Wednesday"]
@@ -74,7 +74,7 @@ const lawyers = [
     name: "Thurgood Marshall",
     expertise: "Real Estate Lawyer",
     licenseNo: "BD 12431347",
-    image: "https://pixabay.com/get/g1234567890abcdef.jpg",
+    image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "1+ Years Experience",
     consultationFee: 130,
     availabilityDays: ["Friday", "Saturday"]
@@ -84,7 +84,7 @@ const lawyers = [
     name: "Hugh Cumber",
     expertise: "Environmental Lawyer",
     licenseNo: "BD 37782248",
-    image: "https://pixabay.com/get/g1122334455aabbcc.jpg",
+    image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "1+ Years Experience",
     consultationFee: 210,
     availabilityDays: ["Tuesday", "Wednesday", "Thursday"]
@@ -94,7 +94,7 @@ const lawyers = [
     name: "Clarence Darrow",
     expertise: "Criminal Expert",
     licenseNo: "BD 36945957",
-    image: "https://pixabay.com/get/g1122334455aabbcc.jpg",
+    image: "https://images.pexels.com/photos/868113/pexels-photo-868113.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "20+ Years Experience",
     consultationFee: 190,
     availabilityDays: ["Monday", "Tuesday"]
@@ -104,7 +104,7 @@ const lawyers = [
     name: "Atticus Finch",
     expertise: "Personal Injury Lawyer",
     licenseNo: "BD 98162621",
-    image: "https://pixabay.com/get/g0987654321fedcba.jpg",
+    image: "https://images.pexels.com/photos/761115/pexels-photo-761115.jpeg?auto=compress&cs=tinysrgb&w=600",
     experience: "4+ Years Experience",
     consultationFee: 155,
     availabilityDays: ["Thursday", "Friday", "Saturday"]
@@ -114,7 +114,7 @@ const lawyers = [
     name: "Harvey Specter",
     expertise: "Real Estate Lawyer",
     licenseNo: "BD 25524001",
-    image: "https://depositphotos.com/1234568/lawyer3.jpg",
+    image: "https://images.pexels.com/photos/1181391/pexels-photo-1181391.jpeg?auto=compress&cs=tinysrgb&w=300",
     experience: "15+ Years Experience",
     consultationFee: 175,
     availabilityDays: ["Wednesday", "Thursday"]

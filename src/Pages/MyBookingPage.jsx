@@ -2,21 +2,31 @@ import React, { useState } from "react";
 import { SquareX } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  CartesianGrid,
+} from "recharts";
 
 const MyBookingPage = () => {
-  
-  const [appointments, setAppointments] = useState(JSON.parse(localStorage.getItem("appointments")) || [])
+  const [appointments, setAppointments] = useState(
+    JSON.parse(localStorage.getItem("appointments")) || []
+  );
 
   const handleCancelAppointment = (index) => {
     const updatedAppointments = appointments.filter((_, i) => i !== index);
     localStorage.setItem("appointments", JSON.stringify(updatedAppointments));
     setAppointments(updatedAppointments);
     toast.error("Appointment cancelled successfully!");
-    
   };
 
   return (
-    <div className="px-8 py-12">
+    <div className="px-32 py-12">
+
       <h1 className="text-3xl font-bold text-center mb-2">
         My Today Appointments
       </h1>
@@ -43,7 +53,7 @@ const MyBookingPage = () => {
           </Link>
         </div>
       ) : (
-        <div className="space-y-6">
+        <div className="space-y-6 px-20">
           {appointments.map((appointment, index) => (
             <div
               key={index}

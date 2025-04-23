@@ -10,38 +10,32 @@ const LawyerProfilePage = () => {
   const [lawyer, setLawyer] = useState(null);
   const navigate = useNavigate();
 
-  const [alreadyAppointed, setAlreadyAppointed] = useState(false);
+  const [alreadyAppointed, setAlreadyAppointed] = useState();
 
   useEffect(() => {
     const lawyerData = lawyers.find(
       (lawyer) => lawyer.id === parseInt(lawyerId)
     );
-    if (lawyerData) {
-      setLawyer(lawyerData);
-    }
-
-    const existingAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
-    const isAlreadyAppointed = existingAppointments.find((appointment) => appointment.lawyerId === lawyerId);
-    if (isAlreadyAppointed) {
-      setAlreadyAppointed(true);
-      toast.error("You have already booked an appointment with this lawyer.");
-    }
-
-
+  
     if (!lawyerData) {
       navigate("/no-lawyer-found");
-      return; // Add this to prevent further rendering
+      return; // Exit early if lawyer not found
     }
+  
+    setLawyer(lawyerData);
+  
+    const existingAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    const alreadyBooked = existingAppointments.some(
+      (appointment) => appointment.lawyerId === lawyerData.id
+    );
+  
+    setAlreadyAppointed(alreadyBooked);
   }, [lawyerId, navigate]);
+  
 
   if (!lawyer) {
-      return (
-        <Loding />
-      );
+    return <Loding />;
   }
-
-
-
 
   const handleAppointmentBooking = () => {
     const newAppointment = {
@@ -51,20 +45,20 @@ const LawyerProfilePage = () => {
       fee: lawyer.consultationFee,
       bookedAt: new Date().toISOString(),
     };
-  
+
     // Get existing appointments from localStorage
-    const existingAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
-  
+    const existingAppointments =
+      JSON.parse(localStorage.getItem("appointments")) || [];
+
     // Add new one
     existingAppointments.push(newAppointment);
-  
+
     // Save back to localStorage
     localStorage.setItem("appointments", JSON.stringify(existingAppointments));
-  
+
     toast.success("Appointment booked successfully!");
     navigate("/my-bookings");
   };
-  
 
   return (
     <div className="lawyer-profile-page p-6 ">
@@ -138,16 +132,16 @@ const LawyerProfilePage = () => {
             cooperation.
           </p>
         </div>
-        <button className={`w-full rounded-full book-appointment-button bg-green-600 text-white font-bold py-2 px-4 rd hover:bg-green-700 `} disabled={alreadyAppointed}
-          onClick={handleAppointmentBooking}>
-          Book Appointment Now
-          {
-            alreadyAppointed ? (
-              <span className="text-red-500 ml-2">Already Booked</span>
-            ) : (
-              ''
-            )
-          }
+        <button
+          disabled={alreadyAppointed}
+          className={`w-full rounded-full font-bold py-2 px-4 ${
+            alreadyAppointed
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-green-600 hover:bg-green-700 text-white"
+          }`}
+          onClick={handleAppointmentBooking}
+        >
+          {alreadyAppointed ? "Already Booked" : "Book Appointment"}
         </button>
       </div>
     </div>

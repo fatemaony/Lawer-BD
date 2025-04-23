@@ -8,7 +8,7 @@ function LawyerCard({ lawyer }) {
   return (
     <div className="border-1 border-gray-300 rounded-lg p-4 flex items-start space-x-4">
       <img
-        src={laywerImage}
+        src={lawyer.image || laywerImage} 
         alt={lawyer.name}
         className="w-36 h-36 object-cover rounded-lg bg-gray-200"
       />
