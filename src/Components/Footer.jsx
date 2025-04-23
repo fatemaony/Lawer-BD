@@ -59,7 +59,13 @@ const Footer = () => {
                 </ul>
                 <hr className="border-dashed border-gray-500 my-4 w-1/2 mx-auto" />
                 <div className="flex justify-center space-x-6">
-                    <FaFacebook className="text-blue-500 cursor-pointer" size={24} />
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100058336463694"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaFacebook className="text-blue-500 cursor-pointer" size={24} />
+                    </a>
                     <FaLinkedin className="text-blue-700 cursor-pointer" size={24} />
                     <FaYoutube className="text-red-600 cursor-pointer" size={24} />
                 </div>
