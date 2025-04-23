@@ -24,7 +24,7 @@ function LawyersSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10">
           {lawyers.slice(0, visibleCount).map((lawyer, index) => (
             <LawyerCard key={index} lawyer={lawyer} />
           ))}
