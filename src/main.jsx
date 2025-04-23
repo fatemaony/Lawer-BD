@@ -13,6 +13,7 @@ import ErrorPage from "./Pages/ErrorPage.jsx";
 import LawyerProfilePage from "./Pages/LawyerProfilePage.jsx";
 import LawyerErrorPage from "./Pages/LawyerErrorPage.jsx";
 import MyBookingPage from "./Pages/MyBookingPage.jsx";
+import Blogs from "./Pages/Blogs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,17 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <MyBookingPage />
+        <Footer />
+      </>
+    ),
+  }
+,
+  {
+    path: "/blogs",
+    element: (
+      <>
+        <NavBar />
+        <Blogs />
         <Footer />
       </>
     ),
