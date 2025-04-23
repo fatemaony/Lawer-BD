@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.png'; // You'll need to add this logo asset
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -12,10 +12,38 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex space-x-6">
-          <Link to="/" className="text-gray-700 hover:text-green-600">Home</Link>
-          <Link to="/my-bookings" className="text-gray-700 hover:text-green-600">My Bookings</Link>
-          <Link to="/blogs" className="text-gray-700 hover:text-green-600">Blogs</Link>
-          <Link to="/contact-us" className="text-gray-700 hover:text-green-600">Contact Us</Link>
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => 
+              isActive ? "text-green-600 font-bold" : "text-gray-700 hover:text-green-600"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink 
+            to="/my-bookings" 
+            className={({ isActive }) => 
+              isActive ? "text-green-600 font-bold" : "text-gray-700 hover:text-green-600"
+            }
+          >
+            My Bookings
+          </NavLink>
+          <NavLink 
+            to="/blogs" 
+            className={({ isActive }) => 
+              isActive ? "text-green-600 font-bold" : "text-gray-700 hover:text-green-600"
+            }
+          >
+            Blogs
+          </NavLink>
+          <NavLink 
+            to="/contact-us" 
+            className={({ isActive }) => 
+              isActive ? "text-green-600 font-bold" : "text-gray-700 hover:text-green-600"
+            }
+          >
+            Contact Us
+          </NavLink>
         </div>
         
         <button className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-full">
