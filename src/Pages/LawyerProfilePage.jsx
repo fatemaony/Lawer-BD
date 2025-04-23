@@ -10,6 +10,8 @@ const LawyerProfilePage = () => {
   const [lawyer, setLawyer] = useState(null);
   const navigate = useNavigate();
 
+  const [alreadyAppointed, setAlreadyAppointed] = useState(false);
+
   useEffect(() => {
     const lawyerData = lawyers.find(
       (lawyer) => lawyer.id === parseInt(lawyerId)
@@ -17,6 +19,14 @@ const LawyerProfilePage = () => {
     if (lawyerData) {
       setLawyer(lawyerData);
     }
+
+    const existingAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    const isAlreadyAppointed = existingAppointments.find((appointment) => appointment.lawyerId === lawyerId);
+    if (isAlreadyAppointed) {
+      setAlreadyAppointed(true);
+      toast.error("You have already booked an appointment with this lawyer.");
+    }
+
 
     if (!lawyerData) {
       navigate("/no-lawyer-found");
@@ -128,9 +138,16 @@ const LawyerProfilePage = () => {
             cooperation.
           </p>
         </div>
-        <button className="w-full rounded-full book-appointment-button bg-green-600 text-white font-bold py-2 px-4 rd hover:bg-green-700"
+        <button className={`w-full rounded-full book-appointment-button bg-green-600 text-white font-bold py-2 px-4 rd hover:bg-green-700 `} disabled={alreadyAppointed}
           onClick={handleAppointmentBooking}>
           Book Appointment Now
+          {
+            alreadyAppointed ? (
+              <span className="text-red-500 ml-2">Already Booked</span>
+            ) : (
+              ''
+            )
+          }
         </button>
       </div>
     </div>
