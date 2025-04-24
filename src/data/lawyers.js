@@ -31,7 +31,7 @@ const lawyers = [
   },
   {
     id: 4,
-    name: "Janet Bernstein Teebagy",
+    name: "Janet Bernstein",
     expertise: "Family Lawyer",
     licenseNo: "BD 31866110",
     image: "https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=600",

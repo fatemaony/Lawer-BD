@@ -6,18 +6,19 @@ import { Link } from "react-router-dom";
 function LawyerCard({ lawyer }) {
 
   return (
-    <div className="border-1 border-gray-300 rounded-lg p-4 flex items-start space-x-4">
+   <div className="">
+     <div className="border-1 border-gray-300 rounded-lg p-3 flex items-start space-x-3">
       <img
         src={lawyer.image || laywerImage} 
         alt={lawyer.name}
-        className="w-36 h-36 object-cover rounded-lg bg-gray-200"
+        className="w-30 h-36 object-cover rounded-lg bg-gray-200"
       />
       <div className="flex-1">
         <div className="mb-1 flex items-center gap-2">
-          <span className="bg-green-100 text-green-800 text-xs px-4 py-1 rounded-full">
+          <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">
             Available
           </span>
-          <span className="bg-blue-100 rounded-full text-xs text-blue-800 px-4 py-1">
+          <span className="bg-blue-100 rounded-2xl text-center text-[10px] text-blue-800 p-1">
             {lawyer.experience}
           </span>
         </div>
@@ -36,6 +37,7 @@ function LawyerCard({ lawyer }) {
         </div>
       </div>
     </div>
+   </div>
   );
 }
 

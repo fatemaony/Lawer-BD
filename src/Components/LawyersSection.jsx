@@ -13,7 +13,7 @@ function LawyersSection() {
     <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-xl md:text-2xl font-bold text-gray-900 mb-4">
             Our Best Lawyers
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto">
@@ -24,7 +24,7 @@ function LawyersSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10">
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 mb-8 sm:mb-10">
           {lawyers.slice(0, visibleCount).map((lawyer, index) => (
             <LawyerCard key={index} lawyer={lawyer} />
           ))}

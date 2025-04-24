@@ -67,9 +67,7 @@ const LawyerProfilePage = () => {
           Lawyer’s Profile Details
         </h1>
         <p className="text-gray-600 mt-2">
-          Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor
-          amet ut. Suscipit sed est fermentum magna. Quis vitae tempus facilisis
-          turpis imperdiet mattis donec dignissim volutpat.
+        A lawyer is a licensed legal professional who advises clients, prepares legal documents, and represents individuals or organizations in legal proceedings. They interpret laws, advocate for clients' rights, and may specialize in areas such as criminal, civil, corporate, or family law.
         </p>
       </div>
       <div className="profile-details bg-white border-1 border-gray-200 rounded-xl p-6 mb-8">
